@@ -1,0 +1,22 @@
+.header-nav-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &-item {
+    list-style: none;
+    margin-right: 20px;
+    color: white;
+    font-family: "RobotoSerif-400";
+    font-size: 18px;
+    align-self: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #ef5962;
+    }
+  }
+}
