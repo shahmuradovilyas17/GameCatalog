@@ -1,0 +1,40 @@
+.footer-wrapper {
+  background-color: #161b1d;
+
+  .footer-inner {
+    max-width: 1340px;
+    padding: 20px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-logo {
+      color: white;
+      font-family: "RobotoSerif-400";
+      font-size: 18px;
+      align-self: center;
+    }
+
+    .footer-desc {
+      &-author {
+        color: white;
+        font-family: "RobotoSerif-400";
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      &-references {
+        color: white;
+        font-family: "RobotoSerif-400";
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      &-year {
+        color: white;
+        font-family: "RobotoSerif-400";
+        font-size: 18px;
+      }
+    }
+  }
+}
