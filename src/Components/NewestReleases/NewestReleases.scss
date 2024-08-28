@@ -1,0 +1,17 @@
+.new-games-inner {
+  max-width: 1340px;
+  margin: 0 auto;
+
+  .new-games-title {
+    font-family: "RobotoSerif-800";
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .new-games-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

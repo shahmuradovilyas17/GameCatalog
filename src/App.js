@@ -3,6 +3,8 @@ import { MainPage } from "./Pages/MainPage/MainPage";
 import { Header } from "./Components/Header/Header";
 import { Footer } from "./Components/Footer/Footer";
 import { MainPageContextProvider } from "./Components/MainPageContext/MainPageContextProvider/MainPageContextProvider";
+import { GamesPage } from "./Pages/GamesPage/GamesPage";
+import { SelectedGamePage } from "./Pages/SelectedGamePage/SelectedGamePage";
 
 export const App = () => {
   return (
@@ -12,9 +14,10 @@ export const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/Catalog" element={<MainPage />} />
+            <Route path="/Games" element={<GamesPage />} />
             <Route path="/Media" element={<MainPage />} />
             <Route path="/About" element={<MainPage />} />
+            <Route path="/Games/:GameId" element={<SelectedGamePage />} />
           </Routes>
           <Footer />
         </BrowserRouter>

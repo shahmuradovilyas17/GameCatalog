@@ -1,21 +1,13 @@
-import { useContext } from "react";
-import { MainPageContext } from "../MainPageContext/MainPageContext";
+import { NewestReleasesItems } from "../NewestReleasesItems/NewestReleasesItems";
+import "./NewestReleases.scss";
 
 export const NewestReleases = () => {
-  const { newestGamesArr } = useContext(MainPageContext);
   return (
-    <>
-      {newestGamesArr.map((game) => {
-        return (
-          <div className="new-games-item">
-            <div className="new-games-item-img">
-              <img src={game.background_image} alt="game-image" />
-            </div>
-            <div className="new-games-item-name">{game.name}</div>
-            <div className="new-games-item-release-date">{game.date}</div>
-          </div>
-        );
-      })}
-    </>
+    <div className="new-games-inner">
+      <div className="new-games-title">Новые игровые релизы</div>
+      <div className="new-games-items">
+        <NewestReleasesItems />
+      </div>
+    </div>
   );
 };
