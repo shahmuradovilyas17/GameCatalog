@@ -1,0 +1,43 @@
+.top-slider {
+  width: 1340px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    .slider-item {
+      width: 1340px;
+      position: relative;
+
+      .slider-item-image {
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .slider-item-link-button {
+        background-color: #16a7ff;
+        color: white;
+        padding: 24px 36px;
+        border: none;
+        border-radius: 10px;
+        font-family: "RobotoSerif-400";
+        font-size: 30px;
+        line-height: 24.48px;
+        position: absolute;
+        bottom: 40px;
+        left: 80px;
+
+        &:hover {
+          background-color: #002942;
+        }
+      }
+    }
+  }
+}

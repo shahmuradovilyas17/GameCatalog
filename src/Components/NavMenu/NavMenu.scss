@@ -3,20 +3,24 @@
   padding: 0;
   display: flex;
 
-  &-item {
-    list-style: none;
+  &-link {
+    text-decoration: none;
     margin-right: 20px;
-    color: white;
-    font-family: "RobotoSerif-400";
-    font-size: 18px;
     align-self: center;
 
-    &:last-child {
-      margin-right: 0;
-    }
+    .header-nav-menu-item {
+      list-style: none;
+      color: white;
+      font-family: "RobotoSerif-400";
+      font-size: 18px;
 
-    &:hover {
-      color: #ef5962;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: #ef5962;
+      }
     }
   }
 }
