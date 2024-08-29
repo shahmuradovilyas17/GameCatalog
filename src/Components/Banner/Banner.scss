@@ -1,0 +1,28 @@
+.banner-inner {
+  position: relative;
+  max-width: 1340px;
+  margin: 0 auto;
+
+  .banner-img {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .banner-title {
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 40px;
+    font-family: "RobotoSerif-800";
+    color: white;
+    background-color: rgba(50, 50, 54, 0.9);
+    left: 32px;
+    top: 24px;
+  }
+}

@@ -5,6 +5,7 @@ import { Footer } from "./Components/Footer/Footer";
 import { MainPageContextProvider } from "./Components/MainPageContext/MainPageContextProvider/MainPageContextProvider";
 import { GamesPage } from "./Pages/GamesPage/GamesPage";
 import { SelectedGamePage } from "./Pages/SelectedGamePage/SelectedGamePage";
+import { AdaptationsPage } from "./Pages/AdaptationsPage/AdaptationsPage";
 
 export const App = () => {
   return (
@@ -15,7 +16,7 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/Games" element={<GamesPage />} />
-            <Route path="/Adaptations" element={<MainPage />} />
+            <Route path="/Adaptations" element={<AdaptationsPage />} />
             <Route path="/About" element={<MainPage />} />
             <Route path="/Games/:GameId" element={<SelectedGamePage />} />
             <Route

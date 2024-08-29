@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="footer-desc">
           <div className="footer-desc-author">Автор: Ilyas Shahmuradov</div>
           <div className="footer-desc-references">
-            Макеты: VkPlay & StopGame
+            Макеты: VkPlay & StopGame & Кинопоиск
           </div>
           <div className="footer-desc-year">Год: 2024</div>
         </div>
