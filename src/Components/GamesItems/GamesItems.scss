@@ -1,26 +1,10 @@
-.new-adaptations-item {
-  max-width: 300px;
+.new-games-item {
+  max-width: 425px;
   border-radius: 10px;
   overflow: hidden;
   background-color: rgba(50, 50, 54, 0.9);
-  margin-right: 35px;
-  margin-bottom: 35px;
-
-  &:last-child {
-    margin-right: 17.5px;
-  }
-
-  &:nth-child(4n) {
-    margin-right: 17.5px;
-  }
-
-  &:nth-child(5n) {
-    margin-left: 17.5px;
-  }
-
-  &:first-child {
-    margin-left: 17.5px;
-  }
+  margin-right: 32.5px;
+  margin-bottom: 32.5px;
 
   img {
     width: 100%;

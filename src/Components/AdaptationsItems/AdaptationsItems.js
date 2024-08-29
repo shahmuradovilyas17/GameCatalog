@@ -1,16 +1,28 @@
-import { useContext } from "react";
-import "./NewestAdaptationReleasesItems.scss";
-import { MainPageContext } from "../MainPageContext/MainPageContext";
+import "./AdaptationsItems.scss";
 import { Link, useNavigate } from "react-router-dom";
 
-export const NewestAdaptationReleasesItems = () => {
-  const { newestAdaptationsArr } = useContext(MainPageContext);
+export const AdaptationsItems = ({ adaptationsArr, nthChild }) => {
   const navigate = useNavigate();
+
+  const marginFunction = (index, nthChild) => {
+    if (index % nthChild === 0) {
+      return true;
+    }
+  };
+
   return (
     <>
-      {newestAdaptationsArr.map((adaptation) => {
+      {adaptationsArr.map((adaptation, index) => {
         return (
-          <div className="new-adaptations-item" key={adaptation.id}>
+          <div
+            className="new-adaptations-item"
+            key={adaptation.id}
+            style={{
+              marginRight: marginFunction(index + 1, nthChild)
+                ? 0
+                : "calc(140px / 3)",
+            }}
+          >
             <Link to={`/Adaptations/${adaptation.id}`}>
               <img src={adaptation.poster} alt="adaptation-image" />
             </Link>

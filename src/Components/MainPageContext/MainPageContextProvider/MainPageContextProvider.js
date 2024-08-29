@@ -6,6 +6,8 @@ export const MainPageContextProvider = ({ children }) => {
   const [newestGamesArr, setNewestGamesArr] = useState([]);
   const [popularAdaptationsArr, setPopularAdaptationsArr] = useState([]);
   const [newestAdaptationsArr, setNewestAdaptationsArr] = useState([]);
+  const [gamesArr, setGamesArr] = useState([]);
+  const [adaptationsArr, setAdaptationsArr] = useState([]);
 
   useEffect(() => {
     fetch("https://66ce31f6199b1d6286880fb0.mockapi.io/games/games")
@@ -27,6 +29,7 @@ export const MainPageContextProvider = ({ children }) => {
           return false;
         });
         setNewestGamesArr(newGames);
+        setGamesArr(data);
       });
 
     fetch("https://66ce31f6199b1d6286880fb0.mockapi.io/games/adaptations")
@@ -48,6 +51,7 @@ export const MainPageContextProvider = ({ children }) => {
           return false;
         });
         setNewestAdaptationsArr(newAdaptations);
+        setAdaptationsArr(data);
       });
   }, []);
   return (
@@ -58,6 +62,10 @@ export const MainPageContextProvider = ({ children }) => {
           newestGamesArr,
           popularAdaptationsArr,
           newestAdaptationsArr,
+          gamesArr,
+          setGamesArr,
+          adaptationsArr,
+          setAdaptationsArr,
         }}
       >
         {children}

@@ -1,19 +1,27 @@
-import { useContext } from "react";
-import { MainPageContext } from "../MainPageContext/MainPageContext";
-import "./NewestGameReleasesItems.scss";
+import "./GamesItems.scss";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-export const NewestGameReleasesItems = () => {
-  const { newestGamesArr } = useContext(MainPageContext);
-
+export const GamesItems = ({ gamesArr, nthChild }) => {
   const navigate = useNavigate();
+
+  const marginFunction = (index, nthChild) => {
+    if (index % nthChild === 0) {
+      return true;
+    }
+  };
 
   return (
     <>
-      {newestGamesArr.map((game) => {
+      {gamesArr.map((game, index) => {
         return (
-          <div className="new-games-item" key={game.id}>
+          <div
+            className="new-games-item"
+            key={game.id}
+            style={{
+              marginRight: marginFunction(index + 1, nthChild) ? 0 : 32.5,
+            }}
+          >
             <Link to={`/Games/${game.id}`}>
               <img src={game.background_image} alt="game-image" />
             </Link>
