@@ -13,7 +13,10 @@ export const AdaptationsPage = () => {
     <div className="adaptations-page-wrapper">
       <Banner title={title} img={adaptationBanner} />
       <div className="adaptations-page-container">
-        <AdaptationsItems adaptationsArr={adaptationsArr} nthChild={4} />
+        <div className="adaptations-page-container-filtration">Фильтрация</div>
+        <div className="adaptations-page-container-items">
+          <AdaptationsItems adaptationsArr={adaptationsArr} nthChild={3} />
+        </div>
       </div>
     </div>
   );

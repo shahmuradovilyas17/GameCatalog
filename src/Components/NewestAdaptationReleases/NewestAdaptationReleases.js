@@ -12,7 +12,7 @@ export const NewestAdaptationReleases = () => {
         Новые релизы игровый адаптаций
       </div>
       <div className="new-adaptations-items">
-        <AdaptationsItems adaptationsArr={newestAdaptationsArr} />
+        <AdaptationsItems adaptationsArr={newestAdaptationsArr} nthChild={4} />
       </div>
     </div>
   );

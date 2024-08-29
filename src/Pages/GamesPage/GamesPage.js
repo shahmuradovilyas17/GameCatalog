@@ -13,10 +13,10 @@ export const GamesPage = () => {
     <div className="games-page-wrapper">
       <Banner title={title} img={gameBanner} />
       <div className="games-page-container">
-        <div className="games-page-container-games">
+        <div className="games-page-container-filtration">Фильтрация</div>
+        <div className="games-page-container-items">
           <GamesItems gamesArr={gamesArr} nthChild={2} />
         </div>
-        <div className="games-page-container-filtration"></div>
       </div>
     </div>
   );

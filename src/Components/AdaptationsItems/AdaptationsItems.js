@@ -10,6 +10,8 @@ export const AdaptationsItems = ({ adaptationsArr, nthChild }) => {
     }
   };
 
+  console.log(nthChild);
+
   return (
     <>
       {adaptationsArr.map((adaptation, index) => {
@@ -20,7 +22,7 @@ export const AdaptationsItems = ({ adaptationsArr, nthChild }) => {
             style={{
               marginRight: marginFunction(index + 1, nthChild)
                 ? 0
-                : "calc(140px / 3)",
+                : `calc(140px / ${nthChild - 1})`,
             }}
           >
             <Link to={`/Adaptations/${adaptation.id}`}>
