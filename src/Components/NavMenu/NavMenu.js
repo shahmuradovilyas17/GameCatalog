@@ -7,11 +7,11 @@ export const NavMenu = () => {
       <Link to={"/"} className="header-nav-menu-link">
         <li className="header-nav-menu-item">Главная</li>
       </Link>
-      <Link to={"/Catalog"} className="header-nav-menu-link">
+      <Link to={"/Games"} className="header-nav-menu-link">
         <li className="header-nav-menu-item">Каталог</li>
       </Link>
-      <Link to={"/Media"} className="header-nav-menu-link">
-        <li className="header-nav-menu-item">Медиа</li>
+      <Link to={"/Adaptations"} className="header-nav-menu-link">
+        <li className="header-nav-menu-item">Адаптации</li>
       </Link>
       <Link to={"/About"} className="header-nav-menu-link">
         <li className="header-nav-menu-item">О Нас</li>

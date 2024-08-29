@@ -4,6 +4,8 @@ import { MainPageContext } from "../MainPageContext";
 export const MainPageContextProvider = ({ children }) => {
   const [popularGamesArr, setPopularGamesArr] = useState([]);
   const [newestGamesArr, setNewestGamesArr] = useState([]);
+  const [popularAdaptationsArr, setPopularAdaptationsArr] = useState([]);
+  const [newestAdaptationsArr, setNewestAdaptationsArr] = useState([]);
 
   useEffect(() => {
     fetch("https://66ce31f6199b1d6286880fb0.mockapi.io/games/games")
@@ -26,10 +28,38 @@ export const MainPageContextProvider = ({ children }) => {
         });
         setNewestGamesArr(newGames);
       });
+
+    fetch("https://66ce31f6199b1d6286880fb0.mockapi.io/games/adaptations")
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        const popularAdaptations = data.filter((adaptation) => {
+          if (adaptation.category === "popular") {
+            return true;
+          }
+          return false;
+        });
+        setPopularAdaptationsArr(popularAdaptations);
+        const newAdaptations = data.filter((adaptation) => {
+          if (adaptation.category === "new") {
+            return true;
+          }
+          return false;
+        });
+        setNewestAdaptationsArr(newAdaptations);
+      });
   }, []);
   return (
     <>
-      <MainPageContext.Provider value={{ popularGamesArr, newestGamesArr }}>
+      <MainPageContext.Provider
+        value={{
+          popularGamesArr,
+          newestGamesArr,
+          popularAdaptationsArr,
+          newestAdaptationsArr,
+        }}
+      >
         {children}
       </MainPageContext.Provider>
     </>

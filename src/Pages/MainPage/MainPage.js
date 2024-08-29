@@ -1,12 +1,14 @@
 import { MainSlider } from "../../Components/MainPageSlider/MainPageSlider";
-import { NewestReleases } from "../../Components/NewestReleases/NewestReleases";
+import { NewestAdaptationReleases } from "../../Components/NewestAdaptationReleases/NewestAdaptationReleases";
+import { NewestGameReleases } from "../../Components/NewestGameReleases/NewestGameReleases";
 import "./MainPage.scss";
 
 export const MainPage = () => {
   return (
     <div className="main-page-wrapper">
       <MainSlider />
-      <NewestReleases />
+      <NewestGameReleases />
+      <NewestAdaptationReleases />
     </div>
   );
 };

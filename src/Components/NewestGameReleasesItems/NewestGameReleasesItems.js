@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { MainPageContext } from "../MainPageContext/MainPageContext";
-import "./NewestReleasesItems.scss";
+import "./NewestGameReleasesItems.scss";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
-export const NewestReleasesItems = () => {
+export const NewestGameReleasesItems = () => {
   const { newestGamesArr } = useContext(MainPageContext);
 
   const navigate = useNavigate();
@@ -12,8 +13,10 @@ export const NewestReleasesItems = () => {
     <>
       {newestGamesArr.map((game) => {
         return (
-          <div className="new-games-item">
-            <img src={game.background_image} alt="game-image" />
+          <div className="new-games-item" key={game.id}>
+            <Link to={`/Games/${game.id}`}>
+              <img src={game.background_image} alt="game-image" />
+            </Link>
             <div className="new-games-item-content">
               <div className="new-games-item-content-text">
                 <div className="new-games-item-content-text-name">

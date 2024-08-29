@@ -1,0 +1,62 @@
+.new-adaptations-item {
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(50, 50, 54, 0.9);
+  margin-right: 35px;
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-right: 17.5px;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 17.5px;
+  }
+
+  &:nth-child(5n) {
+    margin-left: 17.5px;
+  }
+
+  &:first-child {
+    margin-left: 17.5px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &-content {
+    padding: 10px;
+
+    &-text {
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      margin-bottom: 10px;
+
+      &-name {
+        font-family: "RobotoSerif-600";
+        font-size: 20px;
+      }
+
+      &-release-date {
+        font-family: "RobotoSerif-600";
+        font-size: 20px;
+      }
+    }
+
+    &-link-button {
+      font-family: "RobotoSerif-600";
+      font-size: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

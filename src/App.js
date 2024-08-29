@@ -15,9 +15,13 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/Games" element={<GamesPage />} />
-            <Route path="/Media" element={<MainPage />} />
+            <Route path="/Adaptations" element={<MainPage />} />
             <Route path="/About" element={<MainPage />} />
             <Route path="/Games/:GameId" element={<SelectedGamePage />} />
+            <Route
+              path="/Adaptations/:AdaptationId"
+              element={<SelectedGamePage />}
+            />
           </Routes>
           <Footer />
         </BrowserRouter>
