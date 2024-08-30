@@ -8,17 +8,21 @@
     display: flex;
 
     &-items {
-      max-width: 1040px;
+      max-width: 995px;
       display: flex;
       flex-wrap: wrap;
     }
 
     &-filtration {
-      width: 270px;
-      margin-right: 30px;
-      color: white;
-      font-size: 24px;
-      font-family: "RobotoSerif-700";
+      width: 325px;
+      margin-right: 20px;
+
+      &-title {
+        color: white;
+        font-size: 24px;
+        font-family: "RobotoSerif-700";
+        margin-bottom: 20px;
+      }
     }
   }
 }

@@ -54,6 +54,7 @@ export const MainPageContextProvider = ({ children }) => {
         setAdaptationsArr(data);
       });
   }, []);
+
   return (
     <>
       <MainPageContext.Provider

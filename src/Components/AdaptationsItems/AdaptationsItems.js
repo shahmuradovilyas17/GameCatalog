@@ -10,8 +10,6 @@ export const AdaptationsItems = ({ adaptationsArr, nthChild }) => {
     }
   };
 
-  console.log(nthChild);
-
   return (
     <>
       {adaptationsArr.map((adaptation, index) => {
@@ -20,9 +18,7 @@ export const AdaptationsItems = ({ adaptationsArr, nthChild }) => {
             className="new-adaptations-item"
             key={adaptation.id}
             style={{
-              marginRight: marginFunction(index + 1, nthChild)
-                ? 0
-                : `calc(140px / ${nthChild - 1})`,
+              marginRight: marginFunction(index + 1, nthChild) ? 0 : 46.667,
             }}
           >
             <Link to={`/Adaptations/${adaptation.id}`}>

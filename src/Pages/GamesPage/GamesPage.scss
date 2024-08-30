@@ -16,9 +16,13 @@
     &-filtration {
       width: 425px;
       margin-right: 32.5px;
-      color: white;
-      font-size: 24px;
-      font-family: "RobotoSerif-700";
+
+      &-title {
+        color: white;
+        font-size: 24px;
+        font-family: "RobotoSerif-700";
+        margin-bottom: 20px;
+      }
     }
   }
 }
