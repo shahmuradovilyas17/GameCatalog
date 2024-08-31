@@ -6,6 +6,7 @@ import { MainPageContextProvider } from "./Components/MainPageContext/MainPageCo
 import { GamesPage } from "./Pages/GamesPage/GamesPage";
 import { SelectedGamePage } from "./Pages/SelectedGamePage/SelectedGamePage";
 import { AdaptationsPage } from "./Pages/AdaptationsPage/AdaptationsPage";
+import { SelectedAdaptationPage } from "./Pages/SelectedAdaptationPage/SelectedAdaptationPage";
 
 export const App = () => {
   return (
@@ -21,7 +22,7 @@ export const App = () => {
             <Route path="/Games/:GameId" element={<SelectedGamePage />} />
             <Route
               path="/Adaptations/:AdaptationId"
-              element={<SelectedGamePage />}
+              element={<SelectedAdaptationPage />}
             />
           </Routes>
           <Footer />

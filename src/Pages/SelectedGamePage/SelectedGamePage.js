@@ -1,14 +1,21 @@
 import { useParams } from "react-router";
 import "./SelectedGamePage.scss";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MainPageContext } from "../../Components/MainPageContext/MainPageContext";
 import { SelectedGameSection } from "../../Components/SelectedGameSection/SelectedGameSection";
-import { Link } from "react-router-dom";
 
 export const SelectedGamePage = () => {
   const gId = useParams();
 
   const { gamesArr } = useContext(MainPageContext);
+
+  const [buttonVisibility, setButtonVisibility] = useState(false);
+
+  const changeVisibility = () => {
+    setButtonVisibility((prevState) => {
+      return !prevState;
+    });
+  };
 
   return (
     <>
@@ -42,6 +49,40 @@ export const SelectedGamePage = () => {
                         return <a href={item.store_url}>{item.store}</a>;
                       })}
                     </div>
+                    <button
+                      onClick={changeVisibility}
+                      className={
+                        buttonVisibility
+                          ? "selected-game-profile-button-active"
+                          : "selected-games-profile-button"
+                      }
+                    >
+                      Добавить в библиотеку
+                    </button>
+                    <button
+                      style={{ display: buttonVisibility ? "block" : "none" }}
+                      className="selected-games-profile-button-visible"
+                    >
+                      Играю
+                    </button>
+                    <button
+                      style={{ display: buttonVisibility ? "block" : "none" }}
+                      className="selected-games-profile-button-visible"
+                    >
+                      Пройдено
+                    </button>
+                    <button
+                      style={{ display: buttonVisibility ? "block" : "none" }}
+                      className="selected-games-profile-button-visible"
+                    >
+                      Заброшено
+                    </button>
+                    <button
+                      style={{ display: buttonVisibility ? "block" : "none" }}
+                      className="selected-games-profile-button-visible"
+                    >
+                      В планах
+                    </button>
                   </div>
                 </div>
                 <div className="selected-game-images">

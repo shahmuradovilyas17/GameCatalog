@@ -12,6 +12,9 @@ export const Footer = () => {
           <div className="footer-desc-references">
             Макеты: VkPlay & StopGame & Кинопоиск
           </div>
+          <div className="footer-desc-references">
+            Данные: Кинопоиск & AG.RU
+          </div>
           <div className="footer-desc-year">Год: 2024</div>
         </div>
       </div>

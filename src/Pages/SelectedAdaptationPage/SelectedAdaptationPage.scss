@@ -1,20 +1,20 @@
-.selected-game-wrapper {
+.selected-adaptation-wrapper {
   background-image: url(../../Assets/Images/background-image.jpg);
   padding-top: 50px;
 
-  .selected-game-inner {
+  .selected-adaptation-inner {
     max-width: 1340px;
     margin: 0 auto;
     color: white;
 
-    .selected-game-info {
+    .selected-adaptation-info {
       display: flex;
       justify-content: center;
       margin-bottom: 40px;
 
-      .selected-game-poster {
-        width: 600px;
-        height: 300px;
+      .selected-adaptation-poster {
+        max-width: 305px;
+        max-height: 450px;
 
         img {
           border-top-left-radius: 10px;
@@ -26,20 +26,24 @@
 
       &-text {
         padding: 10px 20px 10px 30px;
-        background-color: rgba(50, 50, 54, 0.9);
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
 
-        .selected-game-name {
+        .selected-adaptation-name {
           font-size: 36px;
           font-family: "RobotoSerif-600";
           margin-bottom: 10px;
         }
 
-        .selected-game-section {
+        .selected-adaptation-type {
+          font-family: "RobotoSerif-600";
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+
+        .selected-adaptation-section {
           display: flex;
           margin-bottom: 15px;
           font-size: 18px;
+          font-family: "RobotoSerif-600";
 
           a {
             margin-left: 10px;
@@ -56,13 +60,13 @@
         width: 226px;
       }
 
-      .selected-games-profile-button {
+      .selected-adaptations-profile-button {
         padding: 10px;
         border: none;
         border-radius: 10px;
       }
 
-      .selected-game-profile-button-active {
+      .selected-adaptation-profile-button-active {
         border-bottom: 1px solid grey;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -70,7 +74,7 @@
         border-bottom-right-radius: none;
       }
 
-      .selected-games-profile-button-visible {
+      .selected-adaptations-profile-button-visible {
         border-bottom: 1px solid grey;
         border-radius: none;
 
@@ -79,15 +83,37 @@
           border-bottom-left-radius: 10px;
         }
       }
+
+      .selected-adaptation-cast {
+        padding: 10px 20px 10px 30px;
+
+        .selected-adaptation-cast-title {
+          margin-left: 10px;
+          font-size: 24px;
+          font-family: "RobotoSerif-600";
+          margin-bottom: 15px;
+        }
+        .selected-adaptation-cast-names {
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-family: "RobotoSerif-500";
+        }
+      }
     }
 
-    .selected-game-images {
+    .selected-adaptation-description {
+      font-size: 18px;
+      font-family: "RobotoSerif-500";
+      margin-bottom: 40px;
+    }
+
+    .selected-adaptation-images {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       padding-bottom: 40px;
 
-      .selected-game-image {
+      .selected-adaptation-image {
         width: 400px;
         height: 200px;
 
