@@ -9,7 +9,7 @@ export const NewestAdaptationReleases = () => {
   return (
     <div className="new-adaptations-inner">
       <div className="new-adaptations-title">
-        Новые релизы игровый адаптаций
+        Новые релизы игровых адаптаций
       </div>
       <div className="new-adaptations-items">
         <AdaptationsItems adaptationsArr={newestAdaptationsArr} nthChild={4} />

@@ -13,8 +13,8 @@ export const NavMenu = () => {
       <Link to={"/Adaptations"} className="header-nav-menu-link">
         <li className="header-nav-menu-item">Адаптации</li>
       </Link>
-      <Link to={"/About"} className="header-nav-menu-link">
-        <li className="header-nav-menu-item">О Нас</li>
+      <Link to={"/Profile"} className="header-nav-menu-link">
+        <li className="header-nav-menu-item">Профиль</li>
       </Link>
     </ul>
   );
