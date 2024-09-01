@@ -1,5 +1,8 @@
 import { useSelector } from "react-redux";
 import "./ProfilePage.scss";
+import { useState } from "react";
+import { GamesItems } from "../../Components/GamesItems/GamesItems";
+import { AdaptationsItems } from "../../Components/AdaptationsItems/AdaptationsItems";
 
 export const ProfilePage = () => {
   const userObj = {
@@ -11,9 +14,30 @@ export const ProfilePage = () => {
     steam: "https://steamcommunity.com/profiles/76561198317305968/",
   };
 
-  const playingData = useSelector((state) => {
-    return state.playing;
+  let libraryGames = {};
+  let libraryAdaptations = {};
+
+  const playingGamesData = useSelector((state) => {
+    return (libraryGames = {
+      playing: state.playingGames,
+      completed: state.completedGames,
+      throw: state.throwGames,
+      planned: state.plannedGames,
+    });
   });
+
+  const watchingAdaptationsData = useSelector((state) => {
+    return (libraryAdaptations = {
+      watching: state.watchingAdaptations,
+      completed: state.completedAdaptations,
+      throw: state.throwAdaptations,
+      planned: state.plannedAdaptations,
+    });
+  });
+
+  const [gamesLibrary, setGamesLibrary] = useState([]);
+  const [adaptationsLibrary, setAdaptationsLibrary] = useState([]);
+
   return (
     <div className="profile-wrapper">
       <div className="profile-inner">
@@ -46,18 +70,95 @@ export const ProfilePage = () => {
           </div>
         </div>
 
-        <div className="profile-user-games">
-          <div className="profile-user-games-title">Добавленные Игры</div>
-          <div className="profile-user-games-buttons">
-            <button>В планах</button>
-            <button>Играю</button>
-            <button>Пройдено</button>
-            <button>Заброшено</button>
+        <div className="profile-user-section">
+          <div className="profile-user-section-title">Добавленные Игры</div>
+          <div className="profile-user-section-buttons">
+            <button
+              onClick={() => {
+                setGamesLibrary(libraryGames.planned);
+              }}
+            >
+              В планах
+            </button>
+            <button
+              onClick={() => {
+                setGamesLibrary(libraryGames.playing);
+              }}
+            >
+              Играю
+            </button>
+            <button
+              onClick={() => {
+                setGamesLibrary(libraryGames.completed);
+              }}
+            >
+              Пройдено
+            </button>
+            <button
+              onClick={() => {
+                setGamesLibrary(libraryGames.throw);
+              }}
+            >
+              Заброшено
+            </button>
+            <button
+              onClick={() => {
+                setGamesLibrary([]);
+              }}
+            >
+              Закрыть
+            </button>
           </div>
-          <div className="profile-user-games-list">
-            {playingData.map((game) => {
-              return <div>{game.name}</div>;
-            })}
+          <div className="profile-user-section-list">
+            <GamesItems gamesArr={gamesLibrary} nthChild={3} />
+          </div>
+        </div>
+        <div className="profile-user-section">
+          <div className="profile-user-section-title">
+            Добавленные Адаптации
+          </div>
+          <div className="profile-user-section-buttons">
+            <button
+              onClick={() => {
+                setAdaptationsLibrary(libraryAdaptations.planned);
+              }}
+            >
+              В планах
+            </button>
+            <button
+              onClick={() => {
+                setAdaptationsLibrary(libraryAdaptations.watching);
+              }}
+            >
+              Смотрю
+            </button>
+            <button
+              onClick={() => {
+                setAdaptationsLibrary(libraryAdaptations.completed);
+              }}
+            >
+              Просмотрено
+            </button>
+            <button
+              onClick={() => {
+                setAdaptationsLibrary(libraryAdaptations.throw);
+              }}
+            >
+              Заброшено
+            </button>
+            <button
+              onClick={() => {
+                setAdaptationsLibrary([]);
+              }}
+            >
+              Закрыть
+            </button>
+          </div>
+          <div className="profile-user-section-list">
+            <AdaptationsItems
+              nthChild={4}
+              adaptationsArr={adaptationsLibrary}
+            />
           </div>
         </div>
       </div>

@@ -3,6 +3,13 @@ import "./SelectedAdaptationPage.scss";
 import { useContext, useState } from "react";
 import { MainPageContext } from "../../Components/MainPageContext/MainPageContext";
 import { SelectedGameSection } from "../../Components/SelectedGameSection/SelectedGameSection";
+import { useDispatch } from "react-redux";
+import {
+  completedAdaptationsAction,
+  plannedAdaptationsAction,
+  throwAdaptationsAction,
+  watchingAdaptationsAction,
+} from "../../Store/Library/actions";
 
 export const SelectedAdaptationPage = () => {
   const aId = useParams();
@@ -16,6 +23,8 @@ export const SelectedAdaptationPage = () => {
       return !prevState;
     });
   };
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -78,24 +87,36 @@ export const SelectedAdaptationPage = () => {
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-adaptations-profile-button-visible"
+                      onClick={() => {
+                        dispatch(watchingAdaptationsAction(adaptation));
+                      }}
                     >
-                      Играю
+                      Смотрю
                     </button>
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-adaptations-profile-button-visible"
+                      onClick={() => {
+                        dispatch(completedAdaptationsAction(adaptation));
+                      }}
                     >
-                      Пройдено
+                      Просмотрено
                     </button>
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-adaptations-profile-button-visible"
+                      onClick={() => {
+                        dispatch(throwAdaptationsAction(adaptation));
+                      }}
                     >
-                      Заброшено
+                      Брошено
                     </button>
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-adaptations-profile-button-visible"
+                      onClick={() => {
+                        dispatch(plannedAdaptationsAction(adaptation));
+                      }}
                     >
                       В планах
                     </button>

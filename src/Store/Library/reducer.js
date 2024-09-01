@@ -1,34 +1,62 @@
 const initialState = {
-  playing: [],
-  completed: [],
-  throw: [],
-  planned: [],
+  playingGames: [],
+  completedGames: [],
+  throwGames: [],
+  plannedGames: [],
+  watchingAdaptations: [],
+  completedAdaptations: [],
+  throwAdaptations: [],
+  plannedAdaptations: [],
 };
 
 export const reducer = (state = initialState, action) => {
   console.log(action);
-  if (action.type === "Playing") {
+  if (action.type === "PlayingGames") {
     return {
       ...state,
-      playing: [...state.playing, action.payload],
+      playingGames: [...state.playingGames, action.payload],
     };
   }
-  if (action.type === "Completed") {
+  if (action.type === "CompletedGames") {
     return {
       ...state,
-      completed: [...state.completed, action.payload],
+      completedGames: [...state.completedGames, action.payload],
     };
   }
-  if (action.type === "Throw") {
+  if (action.type === "ThrowGames") {
     return {
       ...state,
-      throw: [...state.throw, action.payload],
+      throwGames: [...state.throwGames, action.payload],
     };
   }
-  if (action.type === "Planned") {
+  if (action.type === "PlannedGames") {
     return {
       ...state,
-      planned: [...state.planned, action.payload],
+      plannedGames: [...state.plannedGames, action.payload],
+    };
+  }
+  if (action.type === "WatchingAdaptations") {
+    return {
+      ...state,
+      watchingAdaptations: [...state.watchingAdaptations, action.payload],
+    };
+  }
+  if (action.type === "CompletedAdaptations") {
+    return {
+      ...state,
+      completedAdaptations: [...state.completedAdaptations, action.payload],
+    };
+  }
+  if (action.type === "ThrowAdaptations") {
+    return {
+      ...state,
+      throwAdaptations: [...state.throwAdaptations, action.payload],
+    };
+  }
+  if (action.type === "PlannedAdaptations") {
+    return {
+      ...state,
+      plannedAdaptations: [...state.plannedAdaptations, action.payload],
     };
   }
 

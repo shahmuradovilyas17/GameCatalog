@@ -36,7 +36,18 @@
       }
     }
 
-    .profile-user-games {
+    .profile-user-section {
+      margin-bottom: 50px;
+
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 50px;
+      }
       &-title {
         font-size: 28px;
         font-family: "RobotoSerif-600";
@@ -45,6 +56,7 @@
 
       &-buttons {
         display: flex;
+        margin-bottom: 20px;
 
         button {
           padding: 10px;

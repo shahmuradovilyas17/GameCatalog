@@ -4,12 +4,10 @@ import { useContext, useState } from "react";
 import { MainPageContext } from "../../Components/MainPageContext/MainPageContext";
 import { SelectedGameSection } from "../../Components/SelectedGameSection/SelectedGameSection";
 import { useDispatch } from "react-redux";
-import {
-  completedAction,
-  plannedAction,
-  playingAction,
-  throwAction,
-} from "../../Store/Library/actions";
+import { playingGamesAction } from "../../Store/Library/actions";
+import { completedGamesAction } from "../../Store/Library/actions";
+import { throwGamesAction } from "../../Store/Library/actions";
+import { plannedGamesAction } from "../../Store/Library/actions";
 
 export const SelectedGamePage = () => {
   const gId = useParams();
@@ -72,7 +70,7 @@ export const SelectedGamePage = () => {
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
                       onClick={() => {
-                        dispatch(playingAction(game));
+                        dispatch(playingGamesAction(game));
                       }}
                     >
                       Играю
@@ -81,7 +79,7 @@ export const SelectedGamePage = () => {
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
                       onClick={() => {
-                        dispatch(completedAction(game));
+                        dispatch(completedGamesAction(game));
                       }}
                     >
                       Пройдено
@@ -90,7 +88,7 @@ export const SelectedGamePage = () => {
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
                       onClick={() => {
-                        dispatch(throwAction(game));
+                        dispatch(throwGamesAction(game));
                       }}
                     >
                       Заброшено
@@ -99,7 +97,7 @@ export const SelectedGamePage = () => {
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
                       onClick={() => {
-                        dispatch(plannedAction(game));
+                        dispatch(plannedGamesAction(game));
                       }}
                     >
                       В планах

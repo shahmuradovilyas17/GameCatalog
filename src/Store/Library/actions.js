@@ -1,27 +1,55 @@
-export const playingAction = (payload) => {
+export const playingGamesAction = (payload) => {
   return {
-    type: "Playing",
+    type: "PlayingGames",
     payload: payload,
   };
 };
 
-export const completedAction = (payload) => {
+export const completedGamesAction = (payload) => {
   return {
-    type: "Completed",
+    type: "CompletedGames",
     payload,
   };
 };
 
-export const throwAction = (payload) => {
+export const throwGamesAction = (payload) => {
   return {
-    type: "Throw",
+    type: "ThrowGames",
     payload,
   };
 };
 
-export const plannedAction = (payload) => {
+export const plannedGamesAction = (payload) => {
   return {
-    type: "Planned",
+    type: "PlannedGames",
+    payload,
+  };
+};
+
+export const watchingAdaptationsAction = (payload) => {
+  return {
+    type: "WatchingAdaptations",
+    payload: payload,
+  };
+};
+
+export const completedAdaptationsAction = (payload) => {
+  return {
+    type: "CompletedAdaptations",
+    payload,
+  };
+};
+
+export const throwAdaptationsAction = (payload) => {
+  return {
+    type: "ThrowAdaptations",
+    payload,
+  };
+};
+
+export const plannedAdaptationsAction = (payload) => {
+  return {
+    type: "PlannedAdaptations",
     payload,
   };
 };
