@@ -17,31 +17,6 @@
 
     .header-right-panel {
       display: flex;
-      .header-search {
-        background-image: url(../../Assets/Images/search-icon.svg);
-        background-repeat: no-repeat;
-        width: 32px;
-        height: 32px;
-        border-radius: 4px;
-        margin-right: 10px;
-
-        &:hover {
-          background-color: #ef5962;
-        }
-      }
-
-      .header-theme {
-        background-image: url(../../Assets/Images/sun-icon.svg);
-        background-repeat: no-repeat;
-        width: 32px;
-        height: 32px;
-        border-radius: 4px;
-        margin-right: 10px;
-
-        &:hover {
-          background-color: #ef5962;
-        }
-      }
 
       .header-profile {
         background-image: url(../../Assets/Images/user-icon.png);
@@ -53,6 +28,29 @@
         &:hover {
           background-color: #ef5962;
           cursor: pointer;
+        }
+      }
+
+      .header-profile-not-logged {
+        display: flex;
+        color: white;
+        font-family: "RobotoSerif-400";
+        font-size: 18px;
+
+        .header-profile-register {
+          margin-right: 20px;
+
+          &:hover {
+            color: #ef5962;
+            cursor: pointer;
+          }
+        }
+
+        .header-profile-login {
+          &:hover {
+            color: #ef5962;
+            cursor: pointer;
+          }
         }
       }
     }

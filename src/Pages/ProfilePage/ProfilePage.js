@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import "./ProfilePage.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GamesItems } from "../../Components/GamesItems/GamesItems";
 import { AdaptationsItems } from "../../Components/AdaptationsItems/AdaptationsItems";
+import { MainPageContext } from "../../Components/MainPageContext/MainPageContext";
 
 export const ProfilePage = () => {
   const userObj = {
@@ -13,6 +14,9 @@ export const ProfilePage = () => {
     gog: "https://www.gog.com/u/1lyas20",
     steam: "https://steamcommunity.com/profiles/76561198317305968/",
   };
+
+  const { userData } = useContext(MainPageContext);
+  console.log(userData);
 
   let libraryGames = {};
   let libraryAdaptations = {};
@@ -50,17 +54,12 @@ export const ProfilePage = () => {
           </div>
           <div className="profile-user-content-info">
             <div className="profile-user-content-info-text">
-              Nickname: {userObj.nickname}
+              Nickname: {userData.login}
             </div>
             <div className="profile-user-content-info-text">
-              Name: {userObj.name}
+              Name: {userData.name}
             </div>
-            <div className="profile-user-content-info-text">
-              Age: {userObj.age}
-            </div>
-            <div className="profile-user-content-info-text">
-              Registered: {userObj.registerDate}
-            </div>
+
             <div className="profile-user-content-info-text">
               <a href={userObj.steam}>Steam Profile</a>
             </div>

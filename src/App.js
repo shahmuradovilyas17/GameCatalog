@@ -8,6 +8,8 @@ import { SelectedGamePage } from "./Pages/SelectedGamePage/SelectedGamePage";
 import { AdaptationsPage } from "./Pages/AdaptationsPage/AdaptationsPage";
 import { SelectedAdaptationPage } from "./Pages/SelectedAdaptationPage/SelectedAdaptationPage";
 import { ProfilePage } from "./Pages/ProfilePage/ProfilePage";
+import { RegisterPage } from "./Pages/RegisterPage/RegisterPage";
+import { LoginPage } from "./Pages/LoginPage/LoginPage";
 
 export const App = () => {
   return (
@@ -25,6 +27,8 @@ export const App = () => {
               path="/Adaptations/:AdaptationId"
               element={<SelectedAdaptationPage />}
             />
+            <Route path="/Register" element={<RegisterPage />} />
+            <Route path="/Login" element={<LoginPage />} />
           </Routes>
           <Footer />
         </BrowserRouter>

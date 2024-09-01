@@ -66,7 +66,7 @@ export const GamesFiltration = () => {
   const { gamesArr, setGamesArr } = useContext(MainPageContext);
 
   const filterGames = (category, value) => {
-    if (value != "Все") {
+    if (value !== "Все") {
       const filteredGames = gamesArr.filter((game) => {
         if (game[category].includes(value)) {
           return true;
