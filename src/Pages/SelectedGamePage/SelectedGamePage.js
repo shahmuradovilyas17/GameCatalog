@@ -104,6 +104,9 @@ export const SelectedGamePage = () => {
                     </button>
                   </div>
                 </div>
+                <div className="selected-game-description">
+                  {game.description}
+                </div>
                 <div className="selected-game-images">
                   {game.images.map((image) => {
                     return (

@@ -5,7 +5,16 @@ import { SelectComponent } from "../SelectComponent/SelectComponent";
 export const AdaptationFiltration = () => {
   const type = ["Все", "Фильм", "Сериал", "Аниме сериал"];
 
-  const country = ["Все", "США", "Канада", "Япония", "Польша", "Германия"];
+  const country = [
+    "Все",
+    "США",
+    "Канада",
+    "Япония",
+    "Польша",
+    "Германия",
+    "Китай",
+    "Франция",
+  ];
 
   const genre = [
     "Все",
@@ -20,6 +29,8 @@ export const AdaptationFiltration = () => {
     "Мультфильм",
     "Ужасы",
     "Приключения",
+    "Спорт",
+    "Комедия",
   ];
 
   const series = [
@@ -30,6 +41,10 @@ export const AdaptationFiltration = () => {
     "Halo",
     "The Last of Us",
     "Fallout",
+    "Gran Turismo",
+    "Super Mario Bros",
+    "Warcraft",
+    "League of Legends",
   ];
 
   const { adaptationsArr, setAdaptationsArr } = useContext(MainPageContext);

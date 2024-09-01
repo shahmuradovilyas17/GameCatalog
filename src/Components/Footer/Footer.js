@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <div className="footer-wrapper">
       <div className="footer-inner">
-        <div className="footer-logo">RockNPlay</div>
+        <div className="footer-logo">Play N' Watch</div>
         <NavMenu />
         <div className="footer-desc">
           <div className="footer-desc-author">Автор: Ilyas Shahmuradov</div>

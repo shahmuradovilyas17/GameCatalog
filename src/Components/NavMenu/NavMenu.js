@@ -13,9 +13,9 @@ export const NavMenu = () => {
       <Link to={"/Adaptations"} className="header-nav-menu-link">
         <li className="header-nav-menu-item">Адаптации</li>
       </Link>
-      <Link to={"/Profile"} className="header-nav-menu-link">
+      {/* <Link to={"/Profile"} className="header-nav-menu-link">
         <li className="header-nav-menu-item">Профиль</li>
-      </Link>
+      </Link> */}
     </ul>
   );
 };

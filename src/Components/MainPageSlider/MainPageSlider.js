@@ -19,7 +19,7 @@ export const MainSlider = () => {
       slidesPerView={1}
       spaceBetween={50}
       navigation
-      // autoplay
+      autoplay
       className="top-slider"
     >
       {popularGamesArr.map((game) => {

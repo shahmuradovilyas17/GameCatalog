@@ -16,6 +16,13 @@ export const GamesFiltration = () => {
     "Linux",
     "Xbox 360",
     "PlayStation 3",
+    "macOS",
+    "iOS",
+    "PlayStation 2",
+    "Android",
+    "Game Boy Advance",
+    "Classic Macintosh",
+    "PS Vita",
   ];
   const developers = [
     "Все",
@@ -31,6 +38,18 @@ export const GamesFiltration = () => {
     "Game Science",
     "Ninja Theory",
     "Ubisoft Singapore",
+    "OVERKILL Software",
+    "Daybreak Games Company",
+    "Starbreeze Studios",
+    "Deep Silver",
+    "Fishlabs Entertainment",
+    "Rockstar Games",
+    "Remedy Entertainment",
+    "War Drum Studios",
+    "Westlake Interactive",
+    "Rockstar Canada",
+    "Möbius Entertainment",
+    "NEO Software",
   ];
   const series = [
     "Все",
@@ -41,6 +60,7 @@ export const GamesFiltration = () => {
     "Black Myth: Wu Kong",
     "Hellblade",
     "Skull & Bones",
+    "Max Payne",
   ];
 
   const { gamesArr, setGamesArr } = useContext(MainPageContext);
