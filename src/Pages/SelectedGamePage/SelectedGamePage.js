@@ -53,7 +53,11 @@ export const SelectedGamePage = () => {
                     <div className="selected-game-section">
                       Страница игры:{" "}
                       {game.stores.map((item) => {
-                        return <a href={item.store_url}>{item.store}</a>;
+                        return (
+                          <a href={item.store_url} target="_blank">
+                            {item.store}
+                          </a>
+                        );
                       })}
                     </div>
                     <button
