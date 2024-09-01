@@ -1,4 +1,3 @@
-// RegisterPage.js
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import "./RegisterPage.scss";
@@ -12,7 +11,7 @@ export const RegisterPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { setUserData } = useContext(MainPageContext); // Get the setUser function from context
+  const { setUserData } = useContext(MainPageContext);
 
   const onSubmit = (data) => {
     console.log(data);

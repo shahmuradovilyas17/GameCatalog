@@ -1,4 +1,3 @@
-// LoginPage.js
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import "./LoginPage.scss";
