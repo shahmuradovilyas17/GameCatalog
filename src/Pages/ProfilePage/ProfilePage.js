@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import "./ProfilePage.scss";
 
 export const ProfilePage = () => {
@@ -9,6 +10,10 @@ export const ProfilePage = () => {
     gog: "https://www.gog.com/u/1lyas20",
     steam: "https://steamcommunity.com/profiles/76561198317305968/",
   };
+
+  const playingData = useSelector((state) => {
+    return state.playing;
+  });
   return (
     <div className="profile-wrapper">
       <div className="profile-inner">
@@ -48,6 +53,11 @@ export const ProfilePage = () => {
             <button>Играю</button>
             <button>Пройдено</button>
             <button>Заброшено</button>
+          </div>
+          <div className="profile-user-games-list">
+            {playingData.map((game) => {
+              return <div>{game.name}</div>;
+            })}
           </div>
         </div>
       </div>

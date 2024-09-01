@@ -3,6 +3,13 @@ import "./SelectedGamePage.scss";
 import { useContext, useState } from "react";
 import { MainPageContext } from "../../Components/MainPageContext/MainPageContext";
 import { SelectedGameSection } from "../../Components/SelectedGameSection/SelectedGameSection";
+import { useDispatch } from "react-redux";
+import {
+  completedAction,
+  plannedAction,
+  playingAction,
+  throwAction,
+} from "../../Store/Library/actions";
 
 export const SelectedGamePage = () => {
   const gId = useParams();
@@ -16,6 +23,8 @@ export const SelectedGamePage = () => {
       return !prevState;
     });
   };
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -62,24 +71,36 @@ export const SelectedGamePage = () => {
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
+                      onClick={() => {
+                        dispatch(playingAction(game));
+                      }}
                     >
                       Играю
                     </button>
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
+                      onClick={() => {
+                        dispatch(completedAction(game));
+                      }}
                     >
                       Пройдено
                     </button>
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
+                      onClick={() => {
+                        dispatch(throwAction(game));
+                      }}
                     >
                       Заброшено
                     </button>
                     <button
                       style={{ display: buttonVisibility ? "block" : "none" }}
                       className="selected-games-profile-button-visible"
+                      onClick={() => {
+                        dispatch(plannedAction(game));
+                      }}
                     >
                       В планах
                     </button>
